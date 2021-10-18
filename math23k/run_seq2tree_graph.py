@@ -72,7 +72,7 @@ def change_num(num):
 data = load_raw_data("Graph2Tree/math23k/data/Math_23K.json")
 group_data = read_json("Graph2Tree/math23k/data/Math_23K_processed.json")
 
-data = load_raw_data("data/Math_23K.json")
+data = load_raw_data("Graph2Tree/math23k/data/Math_23K.json")
 
 pairs, generate_nums, copy_nums = transfer_num(data)
 
