@@ -20,7 +20,7 @@ learning_rate = 1e-3
 weight_decay = 1e-5
 beam_size = 5
 n_layers = 2
-ori_path = './data/'
+ori_path = 'Graph2Tree/math23k/data/'
 prefix = '23k_processed.json'
 
 def get_train_test_fold(ori_path,prefix,data,pairs,group):
@@ -69,8 +69,8 @@ def change_num(num):
     return new_num
 
 
-data = load_raw_data("data/Math_23K.json")
-group_data = read_json("data/Math_23K_processed.json")
+data = load_raw_data("Graph2Tree/math23k/data/Math_23K.json")
+group_data = read_json("Graph2Tree/math23k/data/Math_23K_processed.json")
 
 data = load_raw_data("data/Math_23K.json")
 
@@ -173,10 +173,10 @@ for epoch in range(n_epochs):
         print("test_answer_acc", float(equation_ac) / eval_total, float(value_ac) / eval_total)
         print("testing time", time_since(time.time() - start))
         print("------------------------------------------------------")
-        torch.save(encoder.state_dict(), "model_traintest/encoder")
-        torch.save(predict.state_dict(), "model_traintest/predict")
-        torch.save(generate.state_dict(), "model_traintest/generate")
-        torch.save(merge.state_dict(), "model_traintest/merge")
+        torch.save(encoder.state_dict(), "Graph2Tree/math23k/model_traintest/encoder")
+        torch.save(predict.state_dict(), "Graph2Tree/math23k/model_traintest/predict")
+        torch.save(generate.state_dict(), "Graph2Tree/math23k/model_traintest/generate")
+        torch.save(merge.state_dict(), "Graph2Tree/math23k/model_traintest/merge")
         if epoch == n_epochs - 1:
             best_acc_fold.append((equation_ac, value_ac, eval_total))
 
