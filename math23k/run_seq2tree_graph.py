@@ -15,7 +15,7 @@ def read_json(path):
 batch_size = 64
 embedding_size = 128
 hidden_size = 512
-n_epochs = 80
+n_epochs = 10
 learning_rate = 1e-3
 weight_decay = 1e-5
 beam_size = 5
@@ -69,10 +69,10 @@ def change_num(num):
     return new_num
 
 
-data = load_raw_data("Graph2Tree/math23k/data/Math_100.json")
+data = load_raw_data("Graph2Tree/math23k/data/Math_1K.json")
 group_data = read_json("Graph2Tree/math23k/data/Math_23K_processed.json")
 
-data = load_raw_data("Graph2Tree/math23k/data/Math_100.json")
+data = load_raw_data("Graph2Tree/math23k/data/Math_1K.json")
 
 pairs, generate_nums, copy_nums = transfer_num(data)
 
