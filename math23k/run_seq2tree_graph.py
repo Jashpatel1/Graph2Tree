@@ -21,7 +21,7 @@ weight_decay = 1e-5
 beam_size = 5
 n_layers = 2
 ori_path = 'Graph2Tree/math23k/data/'
-prefix = '23k_processed.json'
+prefix = '100_processed.json'
 
 def get_train_test_fold(ori_path,prefix,data,pairs,group):
     mode_train = 'train'
@@ -69,10 +69,10 @@ def change_num(num):
     return new_num
 
 
-data = load_raw_data("Graph2Tree/math23k/data/test_hindi.json")
-group_data = read_json("Graph2Tree/math23k/data/Math_23K_processed.json")
+data = load_raw_data("Graph2Tree/math23k/data/Math_100.json")
+group_data = read_json("Graph2Tree/math23k/data/Math_100_processed.json")
 
-data = load_raw_data("Graph2Tree/math23k/data/test_hindi.json")
+data = load_raw_data("Graph2Tree/math23k/data/Math_100.json")
 
 pairs, generate_nums, copy_nums = transfer_num(data)
 
